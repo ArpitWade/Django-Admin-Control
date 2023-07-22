@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="">
+    <title>Cakeachino</title>
+
+    <style>
+        .collections{
+            width:100%;
+            height:100vh;
+        }
+        .collectionItems{
+            display:grid;
+            background-color: azure;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        }
+    </style>
+
+</head>
+
+
+<body>
+    
+    <div class="collections">
+        {% for i in obj %}
+        <div class="collectionItems">
+            <div>{{i.Product}}</div>
+            <div>{{i.Description}}</div>
+            <div>{{i.Price}}</div>
+            <div>{{i.Offer}}</div>
+            <div><img style="height:100px; width:100px;" src="/media/{{i.ProductImage}}"></div>
+        </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

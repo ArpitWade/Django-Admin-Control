@@ -1,0 +1,142 @@
+
+.adjust{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+.Load{
+	width:200px;
+	height: 200px;
+	/*background: green;*/
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.Load span{
+	left:0;
+	bottom:0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/*background: red;*/
+	border:2px solid black;
+	animation : animate 5s linear infinite;
+	/*animation : animate 2s linear 3s;*/
+}
+
+.Load span:nth-child(2){
+	border-radius:34% 66% 65% 35% / 35% 32% 68% 65%;
+}
+
+.Load span:nth-child(3){
+	animation-direction:reverse;
+	border-radius:44% 56% 35% 65% / 68% 61% 39% 32%;
+}
+.Load span:nth-child(4){
+	animation-duration:3s;
+	border-radius:74% 26% 65% 35% / 68% 73% 27% 32%;
+}
+
+@keyframes animate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+
+
+/*---------------- work on orders page -------------------*/
+.container{
+	width:100%;
+	height:100%;
+	
+}
+.headadjust{
+	display: flex;
+	
+}
+.header{
+	display: flex;
+	flex-basis: 65%;
+	align-items: center;
+	justify-content: center;
+
+	background-color: yellow;
+}
+
+.header .heading{
+	color:red;
+
+	font-size: 24px;
+	font-weight: bold;
+
+}
+
+
+.headadjust .listadjust{
+	display: flex;
+	background: red;
+	flex-basis: 35%;
+	align-items: center;
+	justify-content: center;
+}
+.headadjust .listadjust .listPricing{
+	display: flex;
+	
+}
+
+.ordersPage{
+	width:100%;
+}
+.wholeShop{
+	display: flex;
+}
+.wholeShop .items{
+	display: flex;
+	flex-basis: 65%;
+
+	background: green;
+}
+.wholeShop .items .itemslist{
+	display: grid;
+	grid-template-columns: repeat(3,minmax(250px,1fr));
+	background: green;
+}
+
+.wholeShop .items .itemslist .offeravail figure{
+	position:relative;
+}
+
+.wholeShop .items .itemslist .offeravail figure .offer{
+	position: absolute;
+	top:5px;
+	left:5px;
+}
+
+
+
+
+/*.ordersPage{
+	width:100%;
+	
+}
+.ordersPage .items{
+	width:70%;
+	float:left;
+	height: 100vh;
+	background-color: yellow;
+}
+.ordersPage .shopinfo{
+	width:30%;
+	float:right;
+	height: 100vh;
+	background: red;
+}*/

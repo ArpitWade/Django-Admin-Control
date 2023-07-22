@@ -1,0 +1,228 @@
+*{
+	scroll-behavior: smooth;
+}
+.home{
+	width:100%;
+	height:100vh;
+	margin-top:0;
+	padding-top: 0;
+	background: url(https://png.pngtree.com/thumb_back/fh260/background/20230413/pngtree-cake-strawberry-cake-shop-background-image_2376340.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.Navbar{
+	position:fixed;
+	z-index: 10;
+	width:100%;
+	height: 120px;
+	background-color: hotpink;
+	display: flex;
+	aling-items:center;
+	justify-content: space-between;
+
+}
+
+.iconimg img{
+	/*position: absolute;
+	z-index: 2;*/
+
+}
+.navtitles{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.Navbar img{
+	widht:150px;
+	height:100%;
+}
+.Navbar li{
+	display: inline-block;
+	list-style: none;
+	position: relative;
+	margin-right:10px;
+}
+
+.Navbar a{
+	font-weight: bold;
+	text-decoration: none;
+	color:deepskyblue;
+	font-size: 20px;
+	color:white;
+
+}
+.Navbar li:hover{
+	transform: scale(1.05);
+}
+.Navbar li::after{
+	content:"";
+	height:4px;
+	width:0%;
+	bottom:-6px;
+	background: blue;
+	position: absolute;
+	left:0;
+	transition:0.5s;
+}
+.Navbar li:hover::after{
+	width:100%;
+}
+
+/*       About                */
+.About{
+	
+	width: 100%;
+	height: 80vh;
+	background: url(https://c4.wallpaperflare.com/wallpaper/165/275/593/colorful-windows-10-gradient-minimalism-soft-gradient-hd-wallpaper-preview.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.insideAbout{
+	display: flex;
+	margin:3rem;
+	justify-content: center;
+	align-items: center;
+}
+.slider{
+	display: flex;
+	
+	flex-basis:35%;
+	height:50vh;
+	
+}
+.slider img{
+	height:100%;
+	width: 100%;
+	border-radius: 0 30px 0 30px;
+	
+}
+.insideAbout .AboutContent{
+
+	padding-left:2rem;
+	display: flex;
+	flex-basis: 65%;
+
+}
+.AboutContent p{
+	font-weight: bold;
+	font-size: 16px;
+	text-align:center;
+	line-height:2rem;
+}
+
+
+
+/*-----------------Contact-Us-----------*/
+.contact{
+	width:100%;
+	height:70vh;
+}
+
+.contact h1{
+
+}
+
+.wholeContact{
+	display: flex;
+	
+}
+
+.wholeContact .contact{
+	display: flex;
+	background: green;
+	flex-basis: 50%;
+}
+.wholeContact .contact .map{
+	width:100%;
+}
+.wholeContact .contact .map iframe{
+	width: 100%;
+	height: 100%;
+}
+.wholeContact .form{
+	display: flex;
+	flex-basis: 50%;
+	
+}
+.wholeContact .formdetails{
+	width: 100%;
+
+}
+.wholeContact .form .formdetails form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background:radial-gradient(hotpink,skyblue);
+	height: 100%;
+	
+}
+.wholeContact .form .formdetails form input:not(input[type="submit"]){
+	border-radius: 20px;
+	width:35%;
+}
+.wholeContact .form .formdetails form input[type="submit"]{
+	animation: change 5s linear infinite;
+}
+@keyframes change{
+	0%{
+		background: yellow;
+	}
+	50%{
+		background: pink;
+	}
+}
+.footer{
+	width: 100%;
+	display: flex;
+}
+.footer .footerContent{
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: lightpink;
+}
+
+
+
+
+
+
+/* --------services---------- */
+#services{
+	width: 100%;
+	height: 80vh;
+	background:url(https://e0.pxfuel.com/wallpapers/684/314/desktop-wallpaper-cup-cake-30-background-kawaii-cake.jpg);
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+.facilities{
+
+	display: grid;
+	grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+	grid-gap:40px 40px;
+	
+}
+.facilities > div{
+	background: #3333;
+	border-radius: 20px;
+	height:50vh;
+	transition:transform 1s;
+}
+.facilities > div:hover{
+	transform: translateY(10px);
+	background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+}
+.facilities > div h2{
+	color:hotpink;
+}
+.facilities > div p{
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+
+

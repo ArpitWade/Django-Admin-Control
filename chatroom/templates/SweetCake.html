@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<link rel="stylesheet" href="{% static 'css/Navbarki.css' %}">
+	<link rel="icon" href="https://t4.ftcdn.net/jpg/04/50/35/33/360_F_450353376_69Lp5NmR674oWG82ReeTU7JCsEqIpNH5.jpg">
+	<title>Best Cakes for your Perfect moments</title>
+
+</head>
+<body>
+    <div class="home" id="home">
+			<div class="Navbar">
+				<div class="iconimg">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSANSoDk-QHT7c_u-pqw6IZi4Oib31OezKHmg&usqp=CAU">
+				</div>
+
+				<div class="navtitles">
+					<ul>
+						<li><a href="#home">Home</a> </li>
+						<li><a href="#About">About</a> </li>
+						<li><a href="{% url 'Orders' %}" target="_blank">Orders</a></li>
+						<li><a href="#contact">contact</a> </li>
+						<li><a href="#services">services</a> </li>
+
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<div id="About"></div>
+		<br><br><br><br><br><br><br>
+		<div class="About">
+			<div style="text-align: center;">
+				<h1 style="color:blue;line-height:3rem;">About | Sweetcake</h1>
+			</div><br><br>
+            <marquee scrollamount="10" style="background: gainsboro;color:hotpink;font-weight: bold;font-size:18px">The Best in quality and best in service.The customer trust is our trust.&nbsp;&nbsp;&nbsp;Thank You for visiting on our site!</marquee>
+			<div class="insideAbout">
+				<div class="slider">
+					<img id="image" src="">
+				</div>
+
+				<div class="AboutContent">
+					<p>We are the best in making cakes and desserts.Till now we have delivered to more than 10000+ customers and make feels them happy.We are the best in making cakes and desserts.Till now we have delivered to more than 10000+ customers and make feels them happy.We are the best in making cakes and desserts.Till now we have delivered to more than 10000+ customers and make feels them happy.We are the best in making cakes and desserts.Till now we have delivered to more than 10000+ customers and make feels them happy.We are the best in making cakes and desserts.Till now we have delivered to more than 10000+ customers and make feels them happy.</p>
+
+				</div>
+			</div>
+		</div>
+
+		<div id="contact">
+			<h1 style="text-align: center;">Contact-Us</h1>
+			<div class="wholeContact">
+				<div class="contact">
+					<div class="map">
+						<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?hl=en&amp;q=Perfect%20Bakery%20,vijay%20nagar%20Indore+(Sweetcake)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/sport-gps/">swimming watch</a></iframe>
+					</div>
+				</div>
+
+				<div class="form">
+					<div class="formdetails">
+						<form method="post">
+								{% csrf_token %}
+								<h2>Personal Information</h2>
+								<label>Name</label>
+								<input placeholder="Name" name="Name" type="text">
+								<label>Email</label>
+								<input placeholder="Email" name="Email" type="email">
+								<label>Contact</label>
+								<input placeholder="contact" name="Contact" type="tel"><br>
+								<textarea style="width:50%;height:5rem;" placeholder="suggestions" name="suggestions"></textarea><br>
+
+							<input style="border-radius: 10px;" type="submit">
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="footerContent">
+					<div class="social">
+						<h2>Social Media</h2>
+						<a href="#"><i class="fa fa-instagram" aria-hidden="false" style="color: blue; font-size:25px; margin-right:10px"></i></a>
+						<a href="#"><i class="fa fa-whatsapp" aria-hidden="false" style="color: blue; font-size:25px; margin-right:10px"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="false" style="color: blue; font-size:25px; margin-right:10px"></i></a>
+					</div>
+
+					<div class="address">
+						<h2>Address</h2>
+						<p><address>Vijay Nagar near Sayaji Hotel,Indore</address></p>
+						<p><b>Pincode:</b>452010</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="services">
+			<h1 align="center">Services</h1>
+			<div class="facilities">
+				<div>
+					<h2>Fast and safe Home Delivery</h2>
+					<p> we provide 30min fast home delivery service</p>
+				</div>
+				<div>
+					<h2>Live Cake Decoration</h2>
+					<p>We provide Customer choice decoration on the cake,the decoration is done infront of customer.</p>
+				</div>
+				<div>
+					<h2>Available for Parties</h2>
+					<p>We are available for Parties and your memorable events to make it more creamy.</p>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="Locations">
+
+		</div>
+
+
+		<script>
+			var imgs=["https://imgmedia.lbb.in/media/2022/02/61f93800571b3d41eee88d0a_1643722752250.jpg","https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/rainbow_cake_20402_16x9.jpg","https://assets.epicurious.com/photos/60f5b23b2ec81549d28753be/1:1/w_640,c_limit/ChocolateIceBoxCake_RECIPE_071321_18759.jpg"
+            ]
+
+            var i=document.getElementById("image")
+            var slid=0;
+            function slides(){
+
+                i.src=imgs[slid];
+                slid++;
+                if(slid>imgs.length-1){
+                    slid=0;
+                }
+                setTimeout(slides,3000);
+            }
+        slides();
+		</script>
+</body>
+</html>

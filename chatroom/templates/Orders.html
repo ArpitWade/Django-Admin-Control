@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<link rel="stylesheet" href="{% static 'css/Orderski.css' %}">
+	<link rel="icon" href="https://t4.ftcdn.net/jpg/04/50/35/33/360_F_450353376_69Lp5NmR674oWG82ReeTU7JCsEqIpNH5.jpg">
+	<title>Sweetcake-Orders</title>
+</head>
+<body>
+	<h1 align="center">Orders</h1>
+		<div class="adjust">
+		<div id="Load" class="Load">
+			<h2>Loading...</h2>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		</div>
+
+
+
+<!-- real work --->
+		<div class="container">
+			<div class="headadjust">
+				<div class="header">
+					<div class="heading">Items</div>
+
+				</div>
+				<div class="listadjust">
+					<div class="listPricing">
+						<div class="headimg"><i class="fa fa-shopping-cart" aria-hidden="false"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ordersPage">
+
+				<div class="wholeShop">
+					<div class="items">
+						<div class="itemslist">
+							{% for ob in obj %}
+							<div class="offeravail">
+
+								<figure>
+									<img width="250" height="250" src="/media/{{ob.ProdImage}}">
+
+									<figcaption>
+										<h1>{{ob.Name}}</h1>
+										<button name="{{ob.Name}}" value="{{ob.Price}}">Add/{{ob.Price}}Rs</button>
+									</figcaption>
+									{% if ob.Offer %}
+									<div class="offer" style="background: white;">OFFER</div>
+									{% endif %}
+								</figure>
+
+
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+
+				</div>
+		</div>
+
+
+
+
+		<script>
+			var j=document.getElementsByClassName("adjust")
+			var k=document.getElementById("Load");
+			window.addEventListener('load',function(){
+				k.style.display='none';
+				j[0].style.display='none';
+			})
+		</script>
+</body>
+</html>
